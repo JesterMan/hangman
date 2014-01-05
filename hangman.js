@@ -38,13 +38,7 @@ function wordCheck() {
 		$( "#board" ).append( "<span class=" + val + ">__</span>"); 	
 		 })
 	winCounter= jQuery.unique( hangWordDisplay ).length;
-
-
-	
 };
-
-
-
 function seeIfInWord (checkLetter) {
 		
 		for (var i = hangWord.length - 1; i >= 0; i--) {
@@ -53,11 +47,10 @@ function seeIfInWord (checkLetter) {
  				winCounter --;
  				if (winCounter==0){
  					$( "span").unbind( "click" );
- 	 				alert ("A winner is you!")
+ 	 				alert ("You win!")
  				}
  				return;
-			}
-			
+			}	
 		} 
 	deathCounter ++;	
  	 $("#howHung").attr('src', 'images/' + deathCounter + '.jpg');	
